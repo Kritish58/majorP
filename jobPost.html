@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap css cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <!-- materialize icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/jobPost/jobPost.css" />
+    <!-- tinyMCE editor -->
+    <script src="http://js.nicedit.com/nicEdit-latest.js"></script>
+
+    <script>
+      bkLib.onDomLoaded(function () {
+        new nicEditor().panelInstance('NicEdit');
+      });
+    </script>
+    <!-- tinyMCE editor -->
+    <title>Test</title>
+  </head>
+  <body class="bg-light">
+    <!-- Modal -->
+    <div class="container">
+      <div class="modal fade" id="exampleModal" tabindex="-1">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content bg-light">
+            <div class="modal-header border-bottom-0">
+              <h5 class="modal-title w-100 text-center text-black-50" id="exampleModalLabel">Job Search</h5>
+              <button type="button" class="close" data-dismiss="modal">
+                <span>&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- validation message -->
+              <p class="small w-100 text-center text-success">You are successfully logged in</p>
+              <!-- modal body -->
+              <form action="#" style="">
+                <div class="w-100 text-center">
+                  <input
+                    type="text"
+                    placeholder="job title"
+                    class="border shadow-sm bg-white p-2 rounded w-75 ml-auto"
+                  />
+                  <p class="small text-black-50" style="font-size: 12px !important;">
+                    <strong> Keywords:</strong> Designer, Developer, Engineer,Accountant,etc.
+                  </p>
+                </div>
+                <div class="w-100 d-flex flex-column align-items-center text-center bg-light">
+                  <div class="w-75 bg-light border rounded d-flex justify-content-center shadow-sm">
+                    <input
+                      type="text"
+                      placeholder="location"
+                      class="border-0 rouned-0 bg-white shadow-sm p-2 rounded w-100"
+                    />
+
+                    <button
+                      class="btn rounded-0 shadow-sm border-left"
+                      data-toggle="tooltip"
+                      data-placement="bottom"
+                      title="Turn on location"
+                    >
+                      <i class="material-icons font-weight-bold text-muted" style="font-size: 1rem;">gps_fixed</i>
+                    </button>
+                  </div>
+                  <p class="small text-black-50" style="font-size: 12px !important;">
+                    Choose where you want your next job
+                  </p>
+                </div>
+
+                <div>
+                  <button
+                    type="submit"
+                    class="btn btn-success shadow-none d-flex align-items-center text-light shadow-sm mx-auto"
+                  >
+                    Search
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal -->
+    <!-- main container -->
+    <div class="container-fluid">
+      <!-- row has dash-main-nav and dash-main -->
+      <div class="row">
+        <div class="dash-main-nav p-0">
+          <!-- dash-main-nav has dash-nav-profile && dash-nav-items -->
+          <div class="mainav">
+            <div class="mainav-profile row p-0 justify-content-center align-items-center p-3">
+              <div class="mainav-profile-img col-5"></div>
+              <div class="mainav-profile-text text-center col-7 flex-fill">
+                <small><strong class="text-dark" style="letter-spacing: 0.5px;">David Leinsman</strong></small>
+                <span class="small font-weight-normal text-black-50">Dharan,Sunsari</span>
+              </div>
+              <div class="view-profile col-12 mt-3 text-center">
+                <strong style="font-weight: 500;"
+                  ><a href="#" class="text-decoration-none text-dark">View Profile</a></strong
+                >
+              </div>
+            </div>
+            <div class="mainav-links d-flex flex-column">
+              <a href="#" class="text-decoration-none text-center px-4 py-2 mt-3">
+                Job Vacancy <i class="material-icons">work</i>
+              </a>
+              <a href="#" class="text-decoration-none text-center px-4 py-2">
+                Interview <i class="material-icons">mode_comment</i>
+              </a>
+              <a href="#" class="text-decoration-none text-center px-4 py-2">
+                Certification <i class="material-icons">card_membership</i>
+              </a>
+              <a href="#" class="text-decoration-none text-center px-4 py-2">
+                Announcement <i class="material-icons">announcement</i>
+              </a>
+              <a href="#" class="text-decoration-none text-center px-4 py-2">
+                Log out <i class="material-icons">exit_to_app</i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- dash-main-nav ended-->
+        <!--  -->
+        <!-- dash-main of main container starts -->
+        <div class="dash-main bg-light p-3">
+          <!-- top nav bar of dash main -->
+          <div class="dash-topbar row shadow-sm pb-3">
+            <!-- menu button -->
+            <div class="col-1 align-self-center text-muted invisible">
+              <i class="material-icons dash-menu-btn" onclick="toggleSidenav()">menu</i>
+            </div>
+            <!--  -->
+            <div class="col-sm-8">
+              <form action="#">
+                <div class="row">
+                  <div class="col-4 align-self-center px-0">
+                    <input type="text" placeholder="job title" class="border p-1 rounded w-100" />
+                  </div>
+                  <div class="col-4 align-self-center pl-1">
+                    <input type="text" placeholder="location" class="border p-1 rounded w-100" />
+                  </div>
+                  <div class="col-4 pl-0">
+                    <button type="button" class="btn px-2 pb-0">
+                      <i class="material-icons text-black-50">gps_fixed</i>
+                    </button>
+                    <button type="submit" class="btn bg-white shadow-sm px-2 pb-0 ml-1">
+                      <i class="material-icons text-black-50">search</i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- search bar for responsive -->
+            <!-- <div class="col-8 align-self-center">
+              <form action="#">
+                <div>
+                  <input type="text" placeholder="search" class="bg-white border rounded p-2" />
+                </div>
+              </form>
+            </div> -->
+            <!--  -->
+            <div class="col-3 d-flex justify-content-center bg-transparent">
+              <!-- invisible search button -->
+              <button
+                class="res-search bg-white border-0 shadow-sm d-flex align-items-center mr-2 px-2 rounded invisible"
+                data-toggle="modal"
+                data-target="#exampleModal"
+              >
+                <i class="material-icons text-muted font-weight-bold"> search</i>
+              </button>
+              <!--  -->
+              <button class="res-search bg-white border-0 shadow-sm d-flex align-items-center mr-2 px-2 rounded">
+                <i class="material-icons text-muted font-weight-bold"> settings</i>
+              </button>
+              <button class="dash-notifications bg-transparent border-0">
+                <i class="material-icons text-muted bg-white p-2 rounded shadow-sm">notifications</i>
+                <span
+                  class=""
+                  style="
+                    height: 6px;
+                    width: 6px;
+                    background-color: crimson;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 34%;
+                    top: 12%;
+                    visibility: hidden;
+                  "
+                ></span>
+              </button>
+            </div>
+          </div>
+          <!--lookup top nav bar ended  -->
+          <!--  -->
+          <!--  -->
+          <!-- Start Here -->
+          <!--  -->
+          <!-- main container -->
+          <div class="row p-3">
+            <!-- header contains 1 2 3 -->
+            <div class="col-12 my-2 d-flex justify-content-center">
+              <div class="p-2 px-3 lead border step-counter step-counter-active">1</div>
+              <div class="p-2 px-3 lead border step-counter">2</div>
+              <div class="p-2 px-3 lead border step-counter">3</div>
+            </div>
+            <style></style>
+            <!-- form -->
+            <div class="col-12 border rounded bg-white p-2">
+              <!-- form title -->
+              <p class="lead"><strong>Step1: </strong>What Job do you want to post?</p>
+              <div class="col-12">
+                <form action="#" class="w-100">
+                  <div class="w-100">
+                    <div class="row">
+                      <!-- job title -->
+                      <div class="col-12 col-sm-6 col-lg-4">
+                        <label for="job-title"><h6 class="my-0 text-muted">Job Title*</h6></label>
+                        <input class="form-control" type="text" id="job-title" />
+                      </div>
+                      <!-- Location -->
+                      <div class="col-12 col-sm-6 col-lg-4">
+                        <label for="location"><h6 class="my-0 text-muted">Location*</h6></label>
+                        <input class="form-control" type="text" id="location" />
+                      </div>
+                      <!-- Employment Type -->
+                      <div class="col-12 col-sm-6 col-lg-4">
+                        <label for="employment-type"><h6 class="my-0 text-muted">Employment Type*</h6></label>
+                        <select class="form-control" name="" id="employemnt-type">
+                          <option value="internship">Internship</option>
+                          <option value="fullTime">Full Time</option>
+                          <option value="partTime">Part Time</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- Job functions -->
+                    <div class="row my-3 p-3">
+                      <div class="w-100">
+                        <h6 class="text-muted my-0 mb-1">Job Function <span>(Select up to 3)*</span></h6>
+                        <!-- inside two divs we need input -->
+                        <div id="job-functions-inputs" class="d-flex flex-wrap p-2 border rounded">
+                          <div
+                            class="p-1 px-2 border text-muted mr-1 d-flex align-items-center mb-1"
+                            style="
+                              height: fit-content;
+                              border-radius: 18px;
+                              font-size: 14px;
+                              background-color: royalblue;
+                            "
+                          >
+                            <!-- <input
+                              class="border rounded p-0"
+                              style="width: fit-content;"
+                              type="text"
+                              value="Engineering"
+                            /> -->
+                            <button class="btn p-0 pt-1 text-light shadow-none">
+                              <i class="material-icons" style="font-size: 1.1rem;">clear</i>
+                            </button>
+                            <span class="text-center mb-1 text-light">Engineering</span>
+                          </div>
+                          <div
+                            class="p-1 px-2 border text-muted mr-1 d-flex align-items-center mb-1 text-light"
+                            style="
+                              height: fit-content;
+                              border-radius: 18px;
+                              font-size: 14px;
+                              background-color: royalblue;
+                            "
+                          >
+                            <!-- <input
+                              class="form-control"
+                              style="width: fit-content;"
+                              type="text"
+                              placeholder="information technology"
+                            /> -->
+                            <button class="btn p-0 pt-1 shadow-none">
+                              <i class="material-icons text-light" style="font-size: 1.1rem;">clear</i>
+                            </button>
+                            <span class="text-center mb-1 text-light">Information Technology </span>
+                          </div>
+                          <form action="#" class="">
+                            <div class="">
+                              <input
+                                class="border p-2 shadow-none bg-light"
+                                type="text"
+                                style="border-radius: 18px; font-size: 14px;"
+                                placeholder="add Job function"
+                              />
+
+                              <button
+                                type="submit"
+                                class="btn bg-transparent shadow-none p-0 pt-1"
+                                style="position: relative; right: 17%;"
+                              >
+                                <i class="material-icons text-muted" style="">add_circle_outline</i>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- job function closes -->
+                    <!-- Company Industry -->
+                    <div class="row my-3 p-0">
+                      <div class="col-12 col-sm-8 col-md-12 col-lg-8">
+                        <h6 class="text-muted my-0 mb-1">Company Industry <span>(Select up to 3)*</span></h6>
+                        <!-- inside two divs we need input -->
+                        <div id="job-functions-inputs" class="d-flex flex-wrap p-2 border rounded">
+                          <div
+                            class="p-1 px-2 border text-light mr-1 d-flex align-items-center mb-1"
+                            style="
+                              height: fit-content;
+                              border-radius: 18px;
+                              font-size: 14px;
+                              background-color: royalblue;
+                            "
+                          >
+                            <!-- <input
+                              class="border rounded p-0"
+                              style="width: fit-content;"
+                              type="text"
+                              value="Engineering"
+                            /> -->
+                            <button class="btn p-0 pt-1 text-light shadow-none">
+                              <i class="material-icons" style="font-size: 1.1rem;">clear</i>
+                            </button>
+                            <span class="text-center mb-1">Engineering</span>
+                          </div>
+                          <div
+                            class="p-1 px-2 border text-light mr-1 d-flex align-items-center mb-1"
+                            style="
+                              height: fit-content;
+                              border-radius: 18px;
+                              font-size: 14px;
+                              background-color: royalblue;
+                            "
+                          >
+                            <!-- <input
+                              class="form-control"
+                              style="width: fit-content;"
+                              type="text"
+                              placeholder="information technology"
+                            /> -->
+                            <button class="btn p-0 pt-1 text-light shadow-none">
+                              <i class="material-icons" style="font-size: 1.1rem;">clear</i>
+                            </button>
+                            <span class="text-center mb-1">Information Technology dsadasdasd</span>
+                          </div>
+                          <form action="#" class="">
+                            <div class="">
+                              <input
+                                class="border p-2 shadow-none bg-light"
+                                type="text"
+                                style="border-radius: 18px; font-size: 14px;"
+                                placeholder="add Company type"
+                              />
+
+                              <button
+                                type="submit"
+                                class="btn bg-transparent shadow-none p-0 pt-1"
+                                style="position: relative; right: 17%;"
+                              >
+                                <i class="material-icons text-muted" style="">add_circle_outline</i>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <!-- seniourity level -->
+                      <div class="col-12 col-sm-4 col-md-12 col-lg-4 mt-2">
+                        <h6 class="text-muted">Seniourity level*</h6>
+                        <div class="w-100">
+                          <select name="" id="" class="w-100 form-control">
+                            <option value="internship">Internship</option>
+                            <option value="partTime">Part-time</option>
+                            <option value="fullTime">Full-Time</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- company industry closes -->
+                    <!-- job description -->
+                    <div id="job-description">
+                      <h6 class="text-muted">Job Description*</h6>
+                      <textarea class="form-control w-100" id="NicEdit" width="" cols="80" rows="6">
+                        Some Sample Text
+                      </textarea>
+                    </div>
+                    <!-- job description ends -->
+                    <!-- skills selection -->
+                    <div class="my-3">
+                      <h6 class="my-0 py-0 text-left text-muted">
+                        Add skills keywords to make your job more visible to the right candidates(select up to 5)
+                      </h6>
+                      <div class="mt-2 d-flex flex-wrap">
+                        <!--  -->
+                        <div
+                          class="border rounded p-1 px-2 mb-2 mr-1"
+                          style="width: fit-content; border-radius: 18px !important; background-color: royalblue;"
+                        >
+                          <button class="btn p-0 text-light">
+                            <i class="material-icons mt-1" style="font-size: 1.1rem;">clear</i>
+                          </button>
+                          <span class="small text-light">Responsive design dfsdfsdfsdf</span>
+                        </div>
+                        <!--  -->
+                        <form action="#">
+                          <input
+                            type="text"
+                            class="border p-2 small bg-light"
+                            style="border-radius: 18px;"
+                            placeholder="add skill"
+                          />
+                          <button type="submit" class="btn bg-transparent p-0" style="position: relative; right: 18%;">
+                            <i class="material-icons text-muted">add_circle_outline</i>
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                    <!-- skill selectin closes -->
+                    <!-- indication -->
+                    <div class="small font-weight-bold text-muted text-right">* indicates required</div>
+                    <!-- indication close -->
+                    <!-- submit area -->
+                    <!-- submit area closes -->
+                    <div class="w-100 text-right my-2">
+                      <button type="button" class="btn btn-secondary">Save a draft</button>
+                      <button type="submit" class="btn btn-primary">Post</button>
+                    </div>
+                    <!--  -->
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <!--  -->
+        </div>
+        <!--  -->
+
+        <!--  -->
+
+        <!--lookup dash-main ended -->
+        <!-- <footer class="bg-light text-muted text-center w-100 mt-4 mb-1">
+          &copy; 2020 e-Recruiter All Rights Reserved
+        </footer> -->
+      </div>
+
+      <!--lookup row inside container fluid -->
+    </div>
+    <!--lookup container fluid -->
+    <div class="sidenav">
+      <div class="sidenav-cut">
+        <i class="material-icons" onclick="toggleSidenav()">clear</i>
+      </div>
+      <div class="sidenav-profile row p-0 justify-content-center align-items-center">
+        <div class="sidenav-profile-img col-6"></div>
+        <div class="sidenav-profile-text text-center col-6 flex-fill">
+          <small><strong>David Leinsman</strong></small>
+          <small>Dharan,Sunsari</small>
+        </div>
+        <div class="view-profile col-12 mt-3 text-center">
+          <strong style="font-weight: 500;"><a href="#" class="text-decoration-none text-dark">View Profile</a></strong>
+        </div>
+      </div>
+      <div class="sidenav-links">
+        <a href="#" class="text-decoration-none text-center px-4 py-2 mt-3">
+          Job Vacancy <i class="material-icons">work</i>
+        </a>
+        <a href="#" class="text-decoration-none text-center px-4 py-2">
+          Interview <i class="material-icons">mode_comment</i>
+        </a>
+        <a href="#" class="text-decoration-none text-center px-4 py-2">
+          Certification <i class="material-icons">card_membership</i>
+        </a>
+        <a href="#" class="text-decoration-none text-center px-4 py-2">
+          Announcement <i class="material-icons">announcement</i>
+        </a>
+        <a href="#" class="text-decoration-none text-center px-4 py-2">
+          Log out <i class="material-icons">exit_to_app</i>
+        </a>
+      </div>
+    </div>
+
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- popper js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <!-- bootstrap js cdn -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- custom script -->
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+    <script src="./scripts/sidenavAndContainer.js"></script>
+    <script></script>
+  </body>
+</html>

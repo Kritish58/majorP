@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap css cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <!-- materialize icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/login/login.css" />
+    <title>Log In</title>
+  </head>
+  <body>
+    <!-- two wrappers only for background -->
+    <div class="log-wrapper log-wrapper1"></div>
+    <div class="log-wrapper log-wrapper2"></div>
+
+    <!-- main container -->
+    <main class="container">
+      <div class="row">
+        <div class="login-head col-12 d-flex w-100 justify-content-around align-items-center mt-4">
+          <div class="home-btn">
+            <a
+              href="#"
+              class="login-btn bg-white p-2 text-decoration-none rounded shadow text-muted d-flex align-items-center"
+              ><span>Home</span> <i class="material-icons ml-1" style="font-size: 1rem; color: #aaa;">home</i></a
+            >
+          </div>
+          <div class="login-head-logo">
+            <div class="logo-img display-4">E-Recruiter</div>
+          </div>
+          <div class="pages-btn">
+            <a
+              href="#"
+              class="login-btn bg-white p-2 text-decoration-none rounded shadow text-muted d-flex align-items-center"
+              ><span>Pages</span>
+              <i class="material-icons ml-1" style="font-size: 1rem; color: #aaa;">expand_more</i></a
+            >
+          </div>
+        </div>
+        <div class="login-info col-12 text-center text-muted mt-4 small">
+          Don't miss your next opportunity.Sign in to stay updated on your professional world
+        </div>
+        <div class="login-body col-12 mt-4 w-100 bg-transparent">
+          <div class="w-50 rounded border shadow bg-light">
+            <!-- <div class="form-header w-100 text-white text-center p-2 bg-success rounded">
+              <h4 class="font-weight-normal">Sign In</h4>
+            </div> -->
+            <nav class="bg-secondary shadow-sm">
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a
+                  class="nav-item nav-link active border-0 rounded-0"
+                  id="nav-home-tab"
+                  data-toggle="tab"
+                  href="#nav-home"
+                  role="tab"
+                  >Job Seeker</a
+                >
+                <a
+                  class="nav-item nav-link border-0 rounded-0"
+                  id="nav-profile-tab"
+                  data-toggle="tab"
+                  href="#nav-profile"
+                  role="tab"
+                  >Employer</a
+                >
+              </div>
+            </nav>
+
+            <!-- nav tab contents -->
+            <div class="tab-content" id="nav-tabContent">
+              <!-- tab content has both forms -->
+              <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
+                <!-- job seeker form -->
+                <form action="#" class="w-100 p-4">
+                  <div class="mb-2">
+                    <label for="login-email" class="text-black-50 font-weight-normal">Email</label>
+                    <input type="text" id="login-email" class="p-2 rounded border" />
+                    <p class="login-validation-msg small text-black-50">Email is invalid</p>
+                  </div>
+                  <div class="mb-2">
+                    <label for="login-password" class="text-black-50 font-weight-normal">Password</label>
+                    <input type="text" id="login-password" class="p-2 rounded border" />
+                    <p class="login-validation-msg small text-black-50">Password is incorrect</p>
+                  </div>
+                  <div>
+                    <button type="submit" class="btn btn-success" style="width: fit-content; margin: auto;">
+                      Submit
+                    </button>
+                  </div>
+                </form>
+                <!-- seeker form close -->
+              </div>
+              <!-- employer form -->
+              <div class="tab-pane fade" id="nav-profile" role="tabpanel">
+                <form action="#" class="w-100 p-4">
+                  <!-- email -->
+                  <div class="mb-2">
+                    <label for="login-email" class="text-black-50 font-weight-normal">Email</label>
+                    <input type="email" id="login-email" class="p-2 rounded border" />
+                    <p class="login-validation-msg small text-black-50">Email is invalid</p>
+                  </div>
+                  <!-- company name -->
+                  <div class="mb-2">
+                    <label for="login-email" class="text-black-50 font-weight-normal">Company Name</label>
+                    <input type="text" id="login-email" class="p-2 rounded border" />
+                    <p class="login-validation-msg small text-black-50">Company Name is not found</p>
+                  </div>
+                  <!-- password -->
+                  <div class="mb-2">
+                    <label for="login-password" class="text-black-50 font-weight-normal">Password</label>
+                    <input type="password" id="login-password" class="p-2 rounded border" />
+                    <p class="login-validation-msg small text-black-50">Password is incorrect</p>
+                  </div>
+                  <!-- submit button -->
+                  <div>
+                    <button type="submit" class="btn btn-success" style="width: fit-content; margin: auto;">
+                      Submit
+                    </button>
+                  </div>
+                  <!--  -->
+                </form>
+              </div>
+              <!-- employer form -->
+            </div>
+            <!-- nav tab close -->
+            <div class="w-100 text-center">
+              <a href="#" class="text-decoration-none">
+                <h6 class="">Forgot password?</h6>
+              </a>
+            </div>
+            <div class="w-100 text-center mb-4">
+              <span class="small text-muted">
+                New to e-Recruiter?
+                <a href="#" class="text-decoration-none">
+                  Register
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-light p-2 text-black-50 text-center" style="position: relative; top: 10vh;">
+      &copy; e-Recruiter All Rights Reserved
+    </footer>
+
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- popper js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <!-- bootstrap js cdn -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

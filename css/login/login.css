@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.log-wrapper1 {
+  height: 120vh;
+  width: 100%;
+  background-image: url("../../img/login-back.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -2;
+  opacity: 0.6;
+}
+
+.log-wrapper2 {
+  height: 120vh;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+main {
+  height: 110vh;
+  z-index: 10;
+}
+
+main .home-login-head .logo-img {
+  z-index: 10;
+  background-image: url("../../img/logo.png");
+  height: 100px;
+  width: 200px;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-color: royalblue;
+}
+
+main .login-info {
+  letter-spacing: 0.4px;
+  font-weight: 500;
+}
+
+main .login-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .login-body form div {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 768px) {
+  main .login-head-logo .logo-img {
+    font-size: 2.4rem;
+  }
+  .login-body .w-50 {
+    width: 75% !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  main .login-head .btn {
+    font-size: 12px;
+  }
+  main .login-head .pages-btn {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  main .login-head-logo .logo-img {
+    font-size: 1.4rem;
+    color: #444;
+    font-weight: 400;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .login-body .w-50 {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-height: 520px) {
+  footer {
+    position: relative;
+    top: 16vh !important;
+  }
+}
+
+@media only screen and (max-height: 490px) {
+  footer {
+    position: relative;
+    top: 24vh !important;
+  }
+}
+
+@media only screen and (max-height: 460px) {
+  footer {
+    position: relative;
+    top: 48vh !important;
+  }
+}
+
+.login-btn i {
+  transition: all 0.1s;
+}
+
+.login-btn:hover i {
+  margin-bottom: 6px;
+  color: #888;
+}
+
+.login-validation-msg {
+  font-size: 10px;
+}
+
+#nav-tab a {
+  color: #eee;
+}
+
+#nav-tab .active {
+  color: #444;
+}

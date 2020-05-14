@@ -1,0 +1,124 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+.reg-wrapper1 {
+  background-image: url('../../img/register-back.jpg');
+  height: 124vh;
+  width: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: absolute;
+  opacity: 0.6;
+  z-index: -2;
+}
+.reg-wrapper2 {
+  background-color: #fff;
+  height: 124vh;
+  width: 100%;
+  -webkit-border-before-width: 100vw;
+  position: absolute;
+  opacity: 0.6;
+  z-index: -1;
+}
+main {
+  z-index: 10;
+
+  .reg-btn i {
+    transition: all 0.1s;
+  }
+  .reg-btn:hover {
+    background-color: #fff !important;
+    i {
+      margin-bottom: 3px;
+      color: #888 !important;
+    }
+  }
+}
+@media only screen and (max-width: 800px) {
+  .reg-body {
+    .rounded {
+      width: 75% !important;
+      .rounded {
+        width: 100% !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  main {
+    .reg-logo {
+      font-size: 2.4rem;
+    }
+  }
+}
+@media only screen and (max-width: 390px) {
+  main {
+    .reg-page-btn {
+      display: none;
+    }
+    .reg-logo {
+      font-size: 2.4rem;
+    }
+    .reg-body {
+      .rounded {
+        width: 90% !important;
+
+        .rounded {
+          margin: 0;
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 290px) {
+  main {
+    .reg-logo {
+      font-size: 1.7rem;
+      font-weight: 400;
+      color: #444;
+    }
+    .reg-btn {
+      font-size: 14px;
+      padding: 4px !important;
+    }
+  }
+}
+
+.reg-msg {
+  font-size: 10px;
+}
+@media only screen and (max-height: 550px) {
+  .reg-wrapper1 {
+    height: 130vh;
+    position: absolute;
+  }
+  .reg-wrapper2 {
+    height: 130vh;
+    position: absolute;
+  }
+  footer {
+    position: relative;
+    top: 17vh !important;
+  }
+}
+
+.reg-text {
+  //make the most...
+  letter-spacing: 0.4px;
+  font-size: 15px;
+  font-weight: 500;
+}
+#nav-tab {
+  a {
+    color: #eee;
+  }
+  .active {
+    // color: royalblue !important;
+    color: #444;
+  }
+}

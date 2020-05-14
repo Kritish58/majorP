@@ -1,0 +1,330 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+.dash-main-nav {
+  position: fixed;
+  height: 100vh;
+  background-color: #ddd;
+}
+.dash-main {
+  position: absolute;
+  left: 0;
+  width: 240px;
+
+  height: 100%;
+}
+// fix width to side nav
+@media only screen and (max-width: 800px) {
+  .dash-main-nav {
+    .dash-nav-items {
+      a {
+        font-size: 13px;
+        i {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+/* remove side nav display and give full width to container */
+@media only screen and (max-width: 768px) {
+  .dash-topbar {
+    .col-3 {
+      .invisible {
+        visibility: hidden !important;
+      }
+    }
+    .invisible {
+      visibility: visible !important;
+    }
+  }
+  .dash-main-nav {
+    display: none;
+  }
+  .dash-main {
+    width: 100% !important;
+    left: 0;
+  }
+}
+
+// dash top bar
+.dash-topbar {
+  div {
+    .dash-menu-btn:hover {
+      cursor: pointer;
+    }
+  }
+  form {
+    ::placeholder {
+      font-size: 14px;
+      color: #aaa;
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .dash-main {
+    width: 100%;
+  }
+  .dash-topbar {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 48px;
+    .col-sm-8 {
+      display: none;
+    }
+    .col-3 {
+      .invisible {
+        visibility: visible !important;
+      }
+    }
+  }
+}
+// sidenav
+.sidenav {
+  z-index: 10;
+  width: 240px;
+  height: 100vh;
+  background-image: linear-gradient(#be8ec4, #8f97ce);
+  // box-shadow: 2px 0px 7px -3px rgba(0, 0, 0, 1);
+
+  position: fixed;
+  top: 0;
+  left: -240px;
+  transition: left 0.2s;
+  .sidenav-profile {
+    .sidenav-profile-img {
+      background-image: url('https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50');
+      background-size: cover;
+      background-position: 50% 30%;
+      height: 60px;
+      max-width: 60px;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      border: solid 2px #eee;
+    }
+  }
+  .sidenav-cut {
+    position: relative;
+    left: 210px;
+    top: 8px;
+    color: #444;
+    user-select: none;
+    i {
+      font-size: 1.1rem;
+    }
+    i:hover {
+      cursor: pointer;
+    }
+  }
+  .sidenav-links {
+    a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 15px;
+      border: solid 1px transparent;
+      transition: all 0.1s;
+      color: #444;
+      i {
+        font-size: 1.2rem;
+      }
+    }
+    a:hover {
+      // transform: scale(1.04);
+
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+      font-size: 1rem;
+      box-shadow: 0px 0px 6px -3px rgba(0, 0, 0, 1);
+      color: #222;
+    }
+    a:active {
+      padding: 8px 24px !important;
+      box-shadow: none;
+      font-size: 15px;
+      color: #444;
+    }
+  }
+}
+.mainav {
+  background-image: linear-gradient(#be8ec4, #8f97ce);
+  height: 100%;
+  .mainav-profile {
+    .mainav-profile-img {
+      background-image: url('https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50');
+      background-size: cover;
+      background-position: 50% 30%;
+      height: 60px;
+      max-width: 60px;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      border: solid 2px #eee;
+    }
+  }
+  .mainav-links {
+    a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 15px;
+      border: solid 1px transparent;
+      transition: all 0.1s;
+      color: #444;
+      i {
+        font-size: 1rem;
+      }
+    }
+    a:hover {
+      // transform: scale(1.04);
+
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+      font-size: 1rem;
+      box-shadow: 0px 0px 6px -3px rgba(0, 0, 0, 1);
+      color: #222;
+    }
+    a:active {
+      padding: 8px 24px !important;
+      box-shadow: none;
+      font-size: 15px;
+      color: #444;
+    }
+  }
+}
+
+.dash-main-nav {
+  width: 240px !important;
+}
+.dash-main {
+  position: absolute;
+  left: 240px;
+}
+@media only screen and (max-width: 768px) {
+  .dash-main {
+    left: 0;
+    width: 100%;
+  }
+}
+
+// New Job Vacancy
+// carousel control
+.carousel-control {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carousel-control-prev {
+  position: relative !important;
+  // left: 90%;
+  height: 40px;
+  width: 40px;
+  // background-color: aquamarine !important;
+}
+.carousel-control-next {
+  position: relative !important;
+
+  height: 40px;
+  width: 40px;
+  // background-color: royalblue !important;
+}
+.carousel-inner {
+  .carousel-item {
+    // .card:first-child {
+    //   margin-left: 0.5vw;
+    // }
+    .card-container {
+      align-self: center;
+      flex: 1 1 0;
+    }
+    .card {
+      // max-width: 17vw !important;
+      // flex-basis: 0;
+      // flex-grow: 1;
+
+      .card-img-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #dddeee;
+        strong {
+          font-weight: 500;
+          letter-spacing: 0.5px;
+        }
+        span {
+        }
+        .card-img {
+          background-image: url('https://images.unsplash.com/photo-1496425745709-5f9297566b46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+          background-size: cover;
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          height: 60px;
+          width: 60px;
+        }
+      }
+      .card-body {
+        .card-title {
+          font-size: 1rem;
+          text-align: center;
+          margin-bottom: 4px;
+        }
+        .card-text {
+          font-size: 14px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .carousel-inner {
+    .carousel-item {
+      justify-self: center;
+      .col-3 {
+        .card:first-child {
+        }
+        .card {
+          min-width: 22vw !important;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 300px) {
+  .carousel-control {
+    h5 {
+      font-size: 1.05rem;
+    }
+  }
+}
+
+// saved jobs
+@media only screen and (max-width: 330px) {
+  .saved-jobs-company {
+    display: none;
+  }
+  .saved-jobs-res-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+// animate card hover
+.carousel-inner {
+  .card-container {
+    .card {
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+    .card:active {
+      transform: scale(1);
+    }
+  }
+}

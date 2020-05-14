@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap css cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <!-- materialize icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="./CSS/dashboard/dashboard.css" />
+    <title>Dashboard</title>
+  </head>
+  <body class="bg-light">
+    <!--  -->
+    <!--  -->
+    <!-- search modal for mobile view -->
+    <div class="modal fade" id="exampleModal" tabindex="-1">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content bg-light">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title w-100 text-center text-black-50" id="exampleModalLabel">Job Search</h5>
+            <button type="button" class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- validation message -->
+            <p class="small w-100 text-center text-success">You are successfully logged in</p>
+            <!-- modal body -->
+            <form action="#" style="">
+              <div class="w-100 text-center">
+                <input
+                  type="text"
+                  placeholder="job title"
+                  class="border shadow-sm bg-white p-2 rounded w-75 ml-auto"
+                />
+                <p class="small text-black-50" style="font-size: 12px !important;">
+                  <strong> Keywords:</strong> Designer, Developer, Engineer,Accountant,etc.
+                </p>
+              </div>
+              <div class="w-100 d-flex flex-column align-items-center text-center bg-light">
+                <div class="w-75 bg-light border rounded d-flex justify-content-center shadow-sm">
+                  <input
+                    type="text"
+                    placeholder="location"
+                    class="border-0 rouned-0 bg-white shadow-sm p-2 rounded w-100"
+                  />
+
+                  <button
+                    class="btn rounded-0 shadow-sm border-left"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Turn on location"
+                  >
+                    <i class="material-icons font-weight-bold text-muted" style="font-size: 1rem;">gps_fixed</i>
+                  </button>
+                </div>
+                <p class="small text-black-50" style="font-size: 12px !important;">
+                  Choose where you want your next job
+                </p>
+              </div>
+
+              <div>
+                <button
+                  type="submit"
+                  class="btn btn-success shadow-none d-flex align-items-center text-light shadow-sm mx-auto"
+                >
+                  Search
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- search modal for mobile view closed -->
+    <!--  -->
+    <!--  -->
+    <!-- main container -->
+    <div class="container-fluid">
+      <!-- row has dash-main-nav and dash-main -->
+      <div class="row">
+        <div class="dash-main-nav p-0">
+          <!-- dash-main-nav has dash-nav-profile && dash-nav-items -->
+          <div class="mainav">
+            <div class="mainav-profile row p-0 justify-content-center align-items-center p-3">
+              <div class="mainav-profile-img col-5"></div>
+              <div class="mainav-profile-text text-center col-7 flex-fill">
+                <small><strong class="text-dark" style="letter-spacing: 0.5px;">David Leinsman</strong></small>
+                <span class="small font-weight-normal text-black-50">Dharan,Sunsari</span>
+              </div>
+              <div class="view-profile col-12 mt-3 text-center">
+                <strong style="font-weight: 500;"
+                  ><a href="#" class="text-decoration-none text-dark">View Profile</a></strong
+                >
+              </div>
+            </div>
+            <div class="mainav-links d-flex flex-column">
+              <a href="#" class="text-decoration-none text-center px-4 py-2 mt-3">
+                Job Vacancy <i class="material-icons">work</i>
+              </a>
+              <a href="#" class="text-decoration-none text-center px-4 py-2">
+                Interview <i class="material-icons">mode_comment</i>
+              </a>
+              <a href="#" class="text-decoration-none text-center px-4 py-2">
+                Certification <i class="material-icons">card_membership</i>
+              </a>
+              <a href="#" class="text-decoration-none text-center px-4 py-2">
+                Announcement <i class="material-icons">announcement</i>
+              </a>
+              <a href="#" class="text-decoration-none text-center px-4 py-2">
+                Log out <i class="material-icons">exit_to_app</i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- dash-main-nav ended-->
+        <!--  -->
+        <!-- dash-main of main container starts -->
+        <div class="dash-main bg-light p-3">
+          <!-- top nav bar of dash main -->
+          <div class="dash-topbar row shadow-sm pb-3">
+            <!-- menu button -->
+            <div class="col-1 align-self-center text-muted invisible">
+              <i class="material-icons dash-menu-btn" onclick="toggleSidenav()">menu</i>
+            </div>
+            <!--  -->
+            <div class="col-sm-8">
+              <form action="#">
+                <div class="row">
+                  <div class="col-4 align-self-center px-0">
+                    <input type="text" placeholder="job title" class="border p-1 rounded w-100" />
+                  </div>
+                  <div class="col-4 align-self-center pl-1">
+                    <input type="text" placeholder="location" class="border p-1 rounded w-100" />
+                  </div>
+                  <div class="col-4 pl-0">
+                    <button type="button" class="btn px-2 pb-0"  data-toggle="tooltip" data-placement="bottom" title="Turn on location">
+                      <i class="material-icons text-black-50">gps_fixed</i>
+                    </button>
+                    <button type="submit" class="btn bg-white shadow-sm px-2 pb-0 ml-1">
+                      <i class="material-icons text-black-50">search</i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- search bar for responsive -->
+            <!-- <div class="col-8 align-self-center">
+              <form action="#">
+                <div>
+                  <input type="text" placeholder="search" class="bg-white border rounded p-2" />
+                </div>
+              </form>
+            </div> -->
+            <!--  -->
+            <div class="col-3 d-flex justify-content-center bg-transparent">
+              <!-- invisible search button -->
+              <button
+                class="res-search bg-white border-0 shadow-sm d-flex align-items-center mr-2 px-2 rounded invisible"
+                data-toggle="modal"
+                data-target="#exampleModal"
+              >
+                <i class="material-icons text-muted font-weight-bold"> search</i>
+              </button>
+              <!--  -->
+              <button class="res-search bg-white border-0 shadow-sm d-flex align-items-center mr-2 px-2 rounded">
+                <i class="material-icons text-muted font-weight-bold"> settings</i>
+              </button>
+              <button class="dash-notifications bg-transparent border-0">
+                <i class="material-icons text-muted bg-white p-2 rounded shadow-sm">notifications</i>
+                <span
+                  class=""
+                  style="
+                    height: 6px;
+                    width: 6px;
+                    background-color: crimson;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 34%;
+                    top: 12%;
+                    visibility: hidden;
+                  "
+                ></span>
+              </button>
+            </div>
+          </div>
+          <!--lookup top nav bar ended  -->
+          <!-- New JOB Vacancy -->
+          <!-- header -->
+          <div class="new-job-vacancy-header mt-3">
+            <div class="carousel-control">
+              <h5 class="text-muted">New Job Vacancy</h5>
+              <div class="d-flex">
+                <a
+                  class="carousel-control-prev bg-secondary"
+                  href="#carouselExampleControls"
+                  role="button"
+                  data-slide="prev"
+                  ><i class="material-icons">navigate_before</i>
+                </a>
+                <a
+                  class="carousel-control-next bg-secondary"
+                  href="#carouselExampleControls"
+                  role="button"
+                  data-slide="next"
+                  ><i class="material-icons">navigate_next</i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- body -->
+          <div id="carouselExampleControls" class="carousel slide mt-0 pt-0 bg-light" data-ride="carousel">
+            
+
+            <!-- carousel items -->
+
+            <!-- carousel inner close -->
+            <!-- For desktop view -->
+            <div class="carousel-inner carousel-desktop-mode">
+              <div class="carousel-item active">
+                <div class="d-flex justify-content-between">
+                  <!-- card container -->
+                  <div class="card-container">
+                    <!-- card -->
+                    <div class="card m-2 shadow-sm">
+                      <div class="card-img-top p-3">
+                        <div class="card-img shadow"></div>
+                        <strong class="small">Delta Technical</strong>
+                        <span class="small text-muted">Kathmandu, Nepal</span>
+                      </div>
+                      <div class="card-body p-3">
+                        <h5 class="card-title">.Net Developer</h5>
+                        <p class="card-text">
+                          04 May - 09 May 2020
+                        </p>
+                        <a href="#" class="btn btn-primary d-flex justify-content-center btn-secondary">Part time</a>
+                      </div>
+                    </div>
+                    <!-- card -->
+                  </div>
+                  <!-- card container -->
+
+                </div>
+              </div>
+              <!--a carousel item close -->
+          </div>
+          <!-- job vacancy body -->
+          
+        </div>
+          <!--  -->
+          <!--  -->
+          <!-- Recommended for you and others -->
+          
+          <div class="final-container row mt-4">
+            <div class="col-12 col-sm-7  d-flex flex-column">
+              <!--  -->
+              <!--  -->
+              <!--  -->
+              <!-- header -->
+              <div class="w-100 d-flex justify-content-between align-items-center ">
+                <h5 class="text-muted">Recommended for you</h5>
+                <i class="material-icons text-muted">more_horiz</i>
+              </div>
+              <!-- a recommended -->
+              <div class=" mt-2 d-flex flex-wrap justify-content-between align-items-center  p-2 bg-white shadow-sm border rounded">
+                <!-- logo and complpany -->
+                <div class="align-self-center d-flex  align-items-center">
+                  <img src="https://image.shutterstock.com/image-vector/adobe-photoshop-icon-vector-logo-600w-1602100291.jpg" class="img-thumbnail" height="40px" width="40px" alt="Ps">
+                  <span class="small text-muted font-weight-normal text-center ml-1">Kathmandu Jobs</span>
+                </div>
+                <!-- job desc -->
+                <div class="font-weight-bold text-muted small flex-fill d-flex justify-content-end py-2">Javascript developer </div>
+                <!-- deadline -->
+                <div class="d-flex justify-content-end  align-items-center flex-fill ">
+                  <button class="btn btn-info disabled p-1 mr-2 " style="font-size: 12px !important;">Full time</button>
+                  <small class="small text-muted">04-09 May 2020</small>
+                </div>
+                
+              </div>
+              <!-- recommended -->
+              <!-- a recommended -->
+              <div class="mt-2 d-flex flex-wrap justify-content-between align-items-center  p-2 bg-white shadow-sm border rounded">
+                <!-- logo and complpany -->
+                <div class="align-self-center d-flex  align-items-center">
+                  <img src="https://image.shutterstock.com/image-vector/adobe-photoshop-icon-vector-logo-600w-1602100291.jpg" class="img-thumbnail" height="40px" width="40px" alt="Ps">
+                  <span class="small text-muted font-weight-normal text-center ml-1">Kathmandu Jobs</span>
+                </div>
+                <!-- job desc -->
+                <div class="  small flex-fill d-flex justify-content-end py-2 font-weight-bold text-muted">Javascript developer </div>
+                <!-- deadline -->
+                <div class="d-flex justify-content-end  align-items-center flex-fill ">
+                  <button class="btn btn-info disabled p-1 mr-2 " style="font-size: 12px !important;">Full time</button>
+                  <small class="small text-muted">04-09 May 2020</small>
+                </div>
+                
+              </div>
+              <!-- recommended -->
+              
+              
+            </div>
+            <!--  -->
+            <!--  -->
+            <!--  -->
+            <div class="col-12 col-sm-5 bg-light rounded m-4 mx-auto">
+              <div class="row">
+                <!-- contains recent-jobs and saved-jobs -->
+                <div class="col-12 recent-jobs bg-white p-2 border rounded shadow-sm mb-3">
+                  <div class="row">
+                    <!-- header -->
+                    <div class="col-12 recent-header mb-2">
+                      <div class=" d-flex flex-wrap w-100 justify-content-between align-items-center ">
+                        <small class="small font-weight-bold text-muted">Recently Applied Jobs</small>
+                        <small class="text-muted"><a href="#" class="text-decoration-none d-flex align-items-center">View all(n) <i class="material-icons" style="font-size: 15px;">arrow_forward</i> </a></small>
+                      </div>
+                    </div>
+                    <!-- recent job item -->
+                    <div class="col-12 my-1 " style="font-size: 1rem;">
+                      <div class="d-flex justify-content-between flex-wrap w-100 border-bottom pb-1">
+                        <small class="text-muted small text-left">You applied in Delta Tech</small>
+                        <small class=" text-muted flex-fill"><a href="#" class="text-decoration-none d-flex align-items-center justify-content-end">View Details<i class="material-icons" style="font-size: 15px;">arrow_forward</i> </a></small>
+                      </div>
+                    </div>
+                    <!--  -->
+                    <!-- recent job item -->
+                    <div class="col-12 my-1" style="font-size: 1rem;">
+                      <div class="d-flex justify-content-between flex-wrap w-100 border-bottom pb-1">
+                        <small class="text-muted small text-left">You applied in Delta Tech</small>
+                        <small class=" text-muted flex-fill"><a href="#" class="text-decoration-none d-flex align-items-center justify-content-end">View Details<i class="material-icons" style="font-size: 15px;">arrow_forward</i> </a></small>
+                      </div>
+                    </div>
+                    <!--  -->
+                    <!-- recent job item -->
+                    <div class="col-12 my-1" style="font-size: 1rem;">
+                      <div class="d-flex justify-content-between flex-wrap w-100 border-bottom pb-1">
+                        <small class="text-muted small text-left">You applied in Delta Tech</small>
+                        <small class=" text-muted flex-fill"><a href="#" class="text-decoration-none d-flex align-items-center justify-content-end">View Details<i class="material-icons" style="font-size: 15px;">arrow_forward</i> </a></small>
+                      </div>
+                    </div>
+                    <!--  -->
+                  </div>
+                </div>
+                <!-- recent-jobs close -->
+                <div class="col-12 saved-jobs bg-white p-3 border rounded shadow-sm">
+                  <div class="row">
+                    <!-- header -->
+                    <div class="col-12 saved-jobs-header d-flex align-items-center justify-content-between mb-2">
+                      <small class="font-weight-bold text-muted">Saved Jobs</small>
+                      <small><a href="#" class="text-secondary text-decoration-none d-flex align-items-center">View All(6) <i class="material-icons" style="font-size: 15px;">arrow_forward</i></a></small>
+                    </div>
+                    <!--table title -->
+                    <div class="col-12">
+                      <div class="row saved-jobs-res-container">
+                        <div class="col-3  col-sm-3 text-center"><small>Position</small></div>
+                        <div class="saved-jobs-company col-3  col-sm-3 text-center"><small>Company</small></div>
+                        <div class="col-3  col-sm-3 text-center"><small>Deadline</small></div>
+                        <div class="col-3  col-sm-3 text-center"><small>Action</small></div>
+                      </div>
+                    </div>
+                    <!-- table title -->
+                    <!-- table data -->
+                    <div class="col-12">
+                      <div class="row mb-2 saved-jobs-res-container">
+                        <div class="col-3  col-sm-3 text-center text-black-50"><span class="small">Juniour Dev</span></div>
+                        <div class="saved-jobs-company col-3 col-sm-3 text-center text-black-50"><span class="small">Bersec Nepal</span></div>
+                        <div class="col-3  col-sm-3 text-center text-black-50"><span class="small">May 12, 2020</span></div>
+                        <div class="col-3  col-sm-3 text-center text-black-50"><span class="small"><a href="#" class="text-black-50 text-decoration-none font-weight-bold">View</a></span></div>
+                      </div>
+
+                      <div class="row saved-jobs-res-container">
+                        <div class="col-3 col-sm-3 text-center text-black-50"><span class="small">Juniour Dev</span></div>
+                        <div class="saved-jobs-company col-3  col-sm-3 text-center text-black-50"><span class="small">Bersec Nepal</span></div>
+                        <div class="col-3  col-sm-3 text-center text-black-50"><span class="small">May 12, 2020</span></div>
+                        <div class="col-3  col-sm-3 text-center text-black-50"><span class="small"><a href="#" class="text-black-50 text-decoration-none font-weight-bold">View</a></span></div>
+                      </div>
+                    </div>
+                    <!-- table data -->
+                  </div>
+                  <!-- row, contains saved jobs header as well as body -->
+                </div>
+                <!-- main saved jobs container with border and shadow -->
+              </div>
+              <!-- row, contains recent jobs and saved jobs -->
+            </div>
+            <!-- main container that contains recent jobs and saved jobs -->
+          </div>
+          <!--  -->
+          <!--  -->
+        
+        <!--lookup dash-main ended -->
+        <footer class="bg-light text-muted text-center w-100 mt-4 mb-1" >
+          &copy; 2020 e-Recruiter All Rights Reserved
+        </footer>
+      </div>
+      
+      <!--lookup row inside container fluid -->
+    </div>
+    <!--lookup container fluid -->
+    <div class="sidenav">
+      <div class="sidenav-cut">
+        <i class="material-icons" onclick="toggleSidenav()">clear</i>
+      </div>
+      <div class="sidenav-profile row p-0 justify-content-center align-items-center">
+        <div class="sidenav-profile-img col-6"></div>
+        <div class="sidenav-profile-text text-center col-6 flex-fill">
+          <small><strong >David Leinsman</strong></small>
+          <small>Dharan,Sunsari</small>
+        </div>
+        <div class="view-profile col-12 mt-3 text-center">
+          <strong style="font-weight: 500;"><a href="#" class="text-decoration-none text-dark">View Profile</a></strong>
+        </div>
+      </div>
+      <div class="sidenav-links">
+        <a href="#" class="text-decoration-none text-center px-4 py-2 mt-3">
+          Job Vacancy <i class="material-icons">work</i>
+        </a>
+        <a href="#" class="text-decoration-none text-center px-4 py-2">
+          Interview <i class="material-icons">mode_comment</i>
+        </a>
+        <a href="#" class="text-decoration-none text-center px-4 py-2">
+          Certification <i class="material-icons">card_membership</i>
+        </a>
+        <a href="#" class="text-decoration-none text-center px-4 py-2">
+          Announcement <i class="material-icons">announcement</i>
+        </a>
+        <a href="#" class="text-decoration-none text-center px-4 py-2">
+          Log out <i class="material-icons">exit_to_app</i>
+        </a>
+      </div>
+    </div>
+
+    
+
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- popper js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <!-- bootstrap js cdn -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- custom script -->
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+    <script src="./scripts/dashboard.js"></script>
+    <script></script>
+  </body>
+</html>

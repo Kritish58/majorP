@@ -1,0 +1,35 @@
+.featured-item {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .photo-details {
+    .feat-details {
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+  }
+  .feat-photo {
+    border: solid 1px #ccc;
+    border-radius: 4px;
+    .feat-img {
+      border-radius: 4px;
+      background-image: url('../img/company-logo.png');
+      height: 60px;
+      width: 60px;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+  }
+}
+.featured-item:hover {
+  cursor: pointer;
+}
+@media only screen and (max-width: 490px) {
+  .photo-details {
+    justify-content: start;
+    .feat-details {
+      margin-top: 14px;
+    }
+  }
+}

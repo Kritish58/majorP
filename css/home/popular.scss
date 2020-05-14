@@ -1,0 +1,199 @@
+.popular-job-body .pop-job-img-1 {
+  background-image: url('../../img/commerce.svg');
+  height: 120px;
+  width: 120px;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.popular-job-body {
+  .rounded:hover {
+    cursor: pointer;
+  }
+}
+
+.pop-job-img-2 {
+  background-image: url('../../img/construction.svg');
+  height: 120px;
+  width: 120px;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.pop-job-img-3 {
+  background-image: url('../../img/design.svg');
+  height: 120px;
+  width: 120px;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.pop-job-img-4 {
+  background-image: url('../../img/farming.svg');
+  height: 120px;
+  width: 120px;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 450px) {
+  .popular-job-body {
+    .row {
+      flex-direction: column;
+      flex-wrap: wrap;
+      .col {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.app-store {
+  background-image: url('../../img/google_play.jpg');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 100px;
+  background-color: #fff;
+}
+.google-play {
+  background-image: url('../../img/app_store.png');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 100px;
+  background-color: #fff;
+}
+.down-sec-img {
+  background-image: url('../../img/img1.jpg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.down-sec-text {
+  .down-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .display-4 {
+    font-size: 3.2rem;
+    text-align: center;
+    text-transform: capitalize;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .down-sec-img {
+    display: none;
+  }
+  .down-sec-text {
+    .small {
+      text-align: center;
+    }
+    .display-4 {
+      font-size: 2.4rem;
+      text-align: center;
+    }
+  }
+}
+
+// Career styles starts from here
+.resume-img {
+  background-image: url('../../img/Resume.svg');
+  background-position: 50% 50%;
+  height: 150px;
+  width: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.training-img {
+  background-image: url('../../img/education.svg');
+  height: 150px;
+  width: 150px;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.career-body {
+}
+
+@media only screen and (max-width: 990px) {
+  .training-img {
+    height: 120px;
+    width: 120px;
+  }
+  .resume-img {
+    height: 120px;
+    width: 120px;
+  }
+  .career-body {
+    button {
+      left: 50%;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .training-img {
+    height: 100px;
+    width: 100px;
+    flex-shrink: 0;
+  }
+  .resume-img {
+    height: 100px;
+    width: 100px;
+    flex-shrink: 0;
+  }
+  .career-body {
+    h4 {
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}
+@media only screen and (max-width: 400px) {
+  .career-body {
+    .training-img {
+      flex-shrink: 0;
+      height: 90px;
+      width: 90px;
+    }
+    .resume-img {
+      flex-shrink: 0;
+      height: 90px;
+      width: 90px;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+    p {
+      font-size: 12px;
+    }
+    .rounded {
+      padding: 0;
+    }
+  }
+}
+
+// footer
+footer {
+  ul {
+    li {
+      a {
+        color: #bbb;
+      }
+      a:hover {
+        color: #888;
+      }
+    }
+  }
+}
+.copyright {
+  color: #aaa;
+  text-align: center;
+}

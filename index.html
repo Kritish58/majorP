@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <!-- materialize fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/home/header.css" />
+    <link rel="stylesheet" href="./css/home/featured.css" />
+    <link rel="stylesheet" href="./css/home/popular.css" />
+    <style>
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #f8f9fa;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <!-- background image -->
+      <div class="header-img"></div>
+      <!-- header content over background image -->
+      <div class="header-content container-fluid">
+        <nav class="row">
+          <!-- logo -->
+          <div class="nav-logo col-sm-6 col-md-3">
+            <img src="./img/logo.png" alt="" />
+          </div>
+          <!-- nav links -->
+          <div class="nav-links col-md-5">
+            <a href="#" class="d-flex">Home<i class="material-icons">home</i></a>
+            <a href="#" class="d-flex">Jobs<i class="material-icons">work</i></a>
+            <a href="#" class="d-flex">Employees<i class="material-icons">people</i></a>
+            <a href="#" class="d-flex">Candidates<i class="material-icons">group</i></a>
+            <a href="#" class="d-flex">Pages<i class="material-icons">layers</i></a>
+          </div>
+          <!-- nav buttons -->
+          <div class="nav-buttons col-sm-6 col-md-4">
+            <div class="log-reg">
+              <a href="#" class="btn btn-outline-dark">login</a>
+              <a href="#" class="btn btn-outline-dark">Register</a>
+            </div>
+            <div class="pipe">|</div>
+            <div class="post-job">
+              <a href="#" class="btn btn-outline-dark">Post a job</a>
+            </div>
+          </div>
+        </nav>
+        <!-- menu button -->
+        <button class="btn btn-menu" onclick="toggleMenu()"><i class="material-icons">menu</i></button>
+        <!-- nav closes here -->
+        <div class="display-4 intro-txt">
+          <p>
+            There are over 1 Lac Ads for you
+          </p>
+        </div>
+
+        <!-- search form -->
+        <form action="#" class="search-form container">
+          <div class="row">
+            <!-- row 1 -->
+            <div class="col-12 col-sm-12 col-md-3 my-2">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">
+                    <i class="material-icons">search</i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Job title" />
+              </div>
+            </div>
+            <!-- row 2 -->
+            <div class="col-12 col-sm-12 col-md-3 my-2">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">
+                    <i class="material-icons">place</i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Location" />
+              </div>
+            </div>
+            <!-- row-3 -->
+            <div class="col-12 col-sm-6 col-md-3 my-2">
+              <select class="form-control form-control">
+                <option>Rookie</option>
+                <option>Experienced</option>
+                <option>Expert</option>
+              </select>
+            </div>
+            <!-- row-4 -->
+            <div class="col-12 col-sm-6 col-md-3 my-2">
+              <button class="btn btn-success">Find Jobs</button>
+            </div>
+            <!-- row close -->
+          </div>
+        </form>
+        <p class="keywords-ref">
+          <small><strong>Trending Keywords:</strong> Developer,Engineer,Designer,Accountant</small>
+        </p>
+        <!-- div header content close -->
+      </div>
+    </header>
+    <!-- wrapper direct inside body -->
+    <div class="wrapper wrapper1"></div>
+    <div class="wrapper wrapper2"></div>
+    <!-- menu nav -->
+    <div class="div-menu">
+      <nav id="nav-menu">
+        <span onclick="toggleMenu()"><i class="material-icons">clear</i></span>
+        <a href="#" class="d-flex">Home<i class="material-icons">home</i></a>
+        <a href="#" class="d-flex">Jobs<i class="material-icons">work</i></a>
+        <a href="#" class="d-flex">Employees<i class="material-icons">people</i></a>
+        <a href="#" class="d-flex">Candidates<i class="material-icons">group</i></a>
+        <a href="#" class="d-flex">Pages<i class="material-icons">layers</i></a>
+      </nav>
+    </div>
+    <!-- 4 relative positioned blocks -->
+    <div class="container">
+      <div class="row">
+        <div class="cont col-12 col-sm-6 col-lg-3">
+          <div class="card shadow">
+            <div class="card-img-top"><p style="text-align: center; color: #fff;">Lorem, ipsum.</p></div>
+            <div class="card-body">
+              <h5 class="card-title">Node.js Training</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit.
+              </p>
+              <a href="#" class="btn btn-primary d-flex justify-content-center">Enroll</a>
+            </div>
+          </div>
+        </div>
+        <div class="cont col-12 col-sm-6 col-lg-3">
+          <div class="card shadow">
+            <div class="card-img-top"><p style="text-align: center; color: #fff;">Lorem, ipsum.</p></div>
+            <div class="card-body">
+              <h5 class="card-title">Learn Bootstrap</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit.
+              </p>
+              <a href="#" class="btn btn-primary d-flex justify-content-center">Enroll</a>
+            </div>
+          </div>
+        </div>
+        <div class="cont col-12 col-sm-6 col-lg-3">
+          <div class="card shadow">
+            <div class="card-img-top"><p style="text-align: center; color: #fff;">Lorem, ipsum.</p></div>
+            <div class="card-body">
+              <h5 class="card-title">Learn ReactJs</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit.
+              </p>
+              <a href="#" class="btn btn-primary d-flex justify-content-center">Enroll</a>
+            </div>
+          </div>
+        </div>
+        <div class="cont col-12 col-sm-6 col-lg-3">
+          <div class="card shadow">
+            <div class="card-img-top"><p style="text-align: center; color: #fff;">Lorem, ipsum.</p></div>
+            <div class="card-body">
+              <h5 class="card-title">Learn Firebase</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit.
+              </p>
+              <a href="#" class="btn btn-primary d-flex justify-content-center">Enroll</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Blocks end here -->
+
+    <!-- Featured JOBS -->
+    <div class="container">
+      <!-- header -->
+      <div class="featured-header d-flex justify-content-between align-items-center">
+        <div class="lead">Featured Jobs</div>
+        <a href="#" class="d-flex align-items-center text-decoration-none"
+          >Browse all <i class="material-icons">arrow_forward</i></a
+        >
+      </div>
+      <!-- container -->
+      <div class="row featured-body">
+        <!-- a row  -->
+        <div class="featured-item col-12 col-lg-6 p-2 bg-transparent">
+          <!-- photo and deatils -->
+          <div class="p-2 border bg-white flex-fill shadow-sm rounded">
+            <div class="photo-details d-flex">
+              <div class="feat-photo align-self-center">
+                <div class="feat-img"></div>
+              </div>
+              <div class="feat-details align-self-center">
+                <h6>Sr. PHP developer (Remote)</h6>
+                <p class="small">Delta Tech</p>
+              </div>
+            </div>
+            <!-- location and button -->
+            <div class="location-button d-flex align-items-center flex-fill justify-content-between">
+              <div class="feat-location d-flex text-muted mr-2">
+                <i class="material-icons">place</i><span>Biratnagar</span>
+              </div>
+              <div class="feat-button">
+                <button class="btn btn-success disabled">Full-time</button>
+              </div>
+            </div>
+            <!-- location-button ended -->
+          </div>
+          <!-- container inside featured-item ended -->
+        </div>
+        <!-- a featued-item ended -->
+        <!-- a row  -->
+        <div class="featured-item col-12 col-lg-6 p-2 bg-transparent">
+          <div class="p-2 border bg-white flex-fill shadow-sm rounded">
+            <div class="photo-details d-flex">
+              <div class="feat-photo align-self-center">
+                <div class="feat-img"></div>
+              </div>
+              <div class="feat-details align-self-center">
+                <h6>.Net Developer</h6>
+                <p class="small">Verisek Nepal</p>
+              </div>
+            </div>
+            <!-- location and button -->
+            <div class="location-button d-flex align-items-center flex-fill justify-content-between">
+              <div class="feat-location d-flex text-muted mr-2">
+                <i class="material-icons">place</i><span>Kathmandu</span>
+              </div>
+              <div class="feat-button">
+                <button class="btn btn-primary disabled">Internship</button>
+              </div>
+            </div>
+            <!-- location-button ended -->
+          </div>
+          <!-- container inside featured-item ended -->
+        </div>
+
+        <div class="featured-item col-12 col-lg-6 p-2 bg-transparent">
+          <div class="p-2 border bg-white flex-fill shadow-sm rounded">asd</div>
+        </div>
+        <div class="featured-item col-12 col-lg-6 p-2 bg-transparent">
+          <div class="p-2 border bg-white flex-fill shadow-sm rounded">asd</div>
+        </div>
+        <!-- a featured item ended -->
+      </div>
+      <!-- row ended -->
+    </div>
+    <!--Featured jobs  container ended -->
+
+    <!-- container just for white bg -->
+    <div class="bg-light w-100 py-3 mt-3">
+      <!-- Popular jobs container -->
+      <div class="popular-jobs container">
+        <!-- popular jobs header -->
+        <div class="popular-job-header d-flex justify-content-between align-items-center">
+          <div class="lead">Popular Jobs Categories</div>
+          <a href="#" class="d-flex text-decoration-none">Browse all<i class="material-icons">arrow_forward</i></a>
+        </div>
+        <!-- popular jobs body -->
+        <div class="popular-job-body container mt-2">
+          <div class="row">
+            <!-- col -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2">
+              <div class="d-flex align-items-center border shadow-sm rounded p-2 bg-white">
+                <!-- img -->
+                <div class="pop-job-img-1"></div>
+                <!-- details -->
+                <div class="pop-job-details ml-3">
+                  <h6 class="text-muted">Commerce</h6>
+                  <p class="small text-black-50">12 Open Positions</p>
+                </div>
+                <!-- details end -->
+              </div>
+            </div>
+            <!-- col -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2">
+              <div class="d-flex align-items-center border shadow-sm rounded p-2 bg-white">
+                <!-- img -->
+                <div class="pop-job-img-2"></div>
+                <!-- details -->
+                <div class="pop-job-details ml-3">
+                  <h6 class="text-muted">Construction</h6>
+                  <p class="small text-black-50">12 Open Positions</p>
+                </div>
+                <!-- details end -->
+              </div>
+            </div>
+            <!-- col -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2">
+              <div class="d-flex align-items-center border shadow-sm rounded p-2 bg-white">
+                <!-- img -->
+                <div class="pop-job-img-3"></div>
+                <!-- details -->
+                <div class="pop-job-details ml-3">
+                  <h6 class="text-muted">Education</h6>
+                  <p class="small text-black-50">12 Open Positions</p>
+                </div>
+                <!-- details end -->
+              </div>
+            </div>
+            <!-- col -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2">
+              <div class="d-flex align-items-center border shadow-sm rounded p-2 bg-white">
+                <!-- img -->
+                <div class="pop-job-img-4"></div>
+                <!-- details -->
+                <div class="pop-job-details ml-3">
+                  <h6 class="text-muted">Farming</h6>
+                  <p class="small text-black-50">12 Open Positions</p>
+                </div>
+                <!-- details end -->
+              </div>
+            </div>
+            <!-- col -->
+          </div>
+          <!-- row div ended -->
+        </div>
+        <!-- popular job body ended -->
+      </div>
+      <!-- popular job container ended -->
+    </div>
+    <!-- popular job white bg over container ended -->
+
+    <section class="bg-white">
+      <div class="download-section container py-5">
+        <div class="row">
+          <div class="down-sec-text col-12 col-sm-6">
+            <div class="display-4">Download Our App</div>
+            <div class="small my-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate unde hic sunt sit nulla dolore
+              veritatis, obcaecati beatae maiores rem?
+            </div>
+            <div class="down-buttons">
+              <div class="app-store"></div>
+              <div class="google-play"></div>
+            </div>
+          </div>
+          <div class="down-sec-img col-sm-6"></div>
+        </div>
+      </div>
+    </section>
+    <!-- career services -->
+    <section style="background-color: royalblue;">
+      <div class="container py-4">
+        <div class="career-header">
+          <p class="lead text-white">Career Services</p>
+        </div>
+        <div class="career-body row">
+          <div class="col-12 col-md-6 p-3">
+            <div class="p-3 d-flex align-items-center bg-white shadow rounded">
+              <div class="resume-img"></div>
+              <div class="ml-3">
+                <h4>Resume services</h4>
+                <p>
+                  To view our resume services,visit to this link
+                  <a href="#" class="text-decoration-none d-flex align-items-center"
+                    >Let's Go<i class="material-icons" style="font-size: 13px;">arrow_forward</i></a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 p-3">
+            <div class="p-3 d-flex align-items-center bg-white shadow rounded">
+              <div class="training-img"></div>
+              <div class="ml-3">
+                <h4>Training</h4>
+                <p>
+                  To view our training services,visit to this link
+                  <a href="#" class="text-decoration-none d-flex align-items-center"
+                    >Let's Go<i class="material-icons" style="font-size: 13px;">arrow_forward</i></a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- card -->
+
+          <!-- card -->
+        </div>
+      </div>
+    </section>
+    <!-- career services close -->
+    <footer class="bg-dark">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <h5 class="text-light">Job Seeker</h5>
+            <ul>
+              <li class="list-group"><a href="#" class="text-decoration-none">Register</a></li>
+              <li class="list-group"><a href="#" class="text-decoration-none">Login</a></li>
+              <li class="list-group"><a href="#" class="text-decoration-none">Search Jobs</a></li>
+              <li class="list-group">
+                <a href="#" class="text-decoration-none">Career services</a>
+              </li>
+              <li class="list-group"><a href="#" class="text-decoration-none">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <h5 class="text-light">Employer</h5>
+            <ul>
+              <li class="list-group"><a href="#" class="text-decoration-none">Register</a></li>
+              <li class="list-group"><a href="#" class="text-decoration-none">Login</a></li>
+              <li class="list-group"><a href="#" class="text-decoration-none">Post Jobs</a></li>
+              <li class="list-group"><a href="#" class="text-decoration-none">Recruitment services</a></li>
+              <li class="list-group"><a href="#" class="text-decoration-none">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <h5 class="text-light">About Us</h5>
+            <ul>
+              <li class="list-group"><a href="#" class="text-decoration-none">About E-Recruiter</a></li>
+              <li class="list-group"><a href="#" class="text-decoration-none">facebook</a></li>
+              <li class="list-group"><a href="#" class="text-decoration-none">Twitter</a></li>
+              <li class="list-group"><a href="#" class="text-decoration-none">Feedback</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <h5 class="text-light">Contact Us</h5>
+            <ul>
+              <li class="list-group"><a href="#" class="text-decoration-none">Bhisan Path</a></li>
+              <li class="list-group"><a href="#" class="text-decoration-none">Dharan, Sunsari</a></li>
+              <li class="list-group"><a href="#" class="text-decoration-none">+977 9843356236</a></li>
+              <li class="list-group"><a href="#" class="text-decoration-none">info.erecruiter@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="copyright bg-dark lead pb-2">
+      &copy; e-Recruiter All Rights Reserved
+    </div>
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- popper js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <!-- bootstrap js cdn -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- custom js -->
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

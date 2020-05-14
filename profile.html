@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap css cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <!-- materialize icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/profile/profile.css" />
+    <title>Profile</title>
+  </head>
+  <body class="bg-light">
+    <!-- Modal -->
+    <!-- Button trigger modal -->
+
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ProfileModal">
+      Launch demo modal
+    </button> -->
+    <!--  -->
+    <!--  -->
+    <!-- Search model for mobile view -->
+    <div class="modal fade" id="exampleModal" tabindex="-1">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content bg-light">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title w-100 text-center text-black-50" id="exampleModalLabel">Job Search</h5>
+            <button type="button" class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- validation message -->
+            <p class="small w-100 text-center text-success">You are successfully logged in</p>
+            <!-- modal body -->
+            <form action="#" style="">
+              <div class="w-100 text-center">
+                <input
+                  type="text"
+                  placeholder="job title"
+                  class="border shadow-sm bg-white p-2 rounded w-75 ml-auto"
+                />
+                <p class="small text-black-50" style="font-size: 12px !important;">
+                  <strong> Keywords:</strong> Designer, Developer, Engineer,Accountant,etc.
+                </p>
+              </div>
+              <div class="w-100 d-flex flex-column align-items-center text-center bg-light">
+                <div class="w-75 bg-light border rounded d-flex justify-content-center shadow-sm">
+                  <input
+                    type="text"
+                    placeholder="location"
+                    class="border-0 rouned-0 bg-white shadow-sm p-2 rounded w-100"
+                  />
+
+                  <button
+                    class="btn rounded-0 shadow-sm border-left"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Turn on location"
+                  >
+                    <i class="material-icons font-weight-bold text-muted" style="font-size: 1rem;">gps_fixed</i>
+                  </button>
+                </div>
+                <p class="small text-black-50" style="font-size: 12px !important;">
+                  Choose where you want your next job
+                </p>
+              </div>
+
+              <div>
+                <button
+                  type="submit"
+                  class="btn btn-success shadow-none d-flex align-items-center text-light shadow-sm mx-auto"
+                >
+                  Search
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- search model for mobile view close -->
+<!--  -->
+<!--  -->
+    <!-- View Details modal -->
+    <div class="modal fade" id="ViewDetailsModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header border-bottom-0 bg-light">
+            <h5 class="modal-title align-self-center" id="exampleModalLabel">Your Details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body bg-light">
+            <!-- personal details -->
+            <div class="w-100 p-4 border rounded shadow-sm bg-white">
+                <h6>Personal Details</h6>
+                <div class="w-100 small text-muted">
+                    <div class="p-1 flex-wrap list-group d-flex flex-row justify-content-between border-bottom  align-items-center">
+                        <div class="font-weight-bold">Age</div>
+                        <div class="text-right">20</div>
+                    </div>
+                    <div class="p-1 flex-wrap list-group d-flex flex-row justify-content-between border-bottom  align-items-center">
+                        <div class="font-weight-bold">Gender</div>
+                        <div class="text-right">Male</div>
+                    </div>
+                    <div class="p-1 flex-wrap list-group d-flex  flex-row justify-content-between border-bottom  align-items-center">
+                        <div class="font-weight-bold">Permanent Address</div>
+                        <div class="text-right">Mahendranagar, Kanchanpur, Province-07, Nepal</div>
+                    </div>
+                    <div class="p-1 flex-wrap list-group d-flex flex-row justify-content-between border-bottom  align-items-center">
+                        <div class="font-weight-bold">Current Address</div>
+                        <div class="text-right">Dharan, Sunsari, Province-01, Nepal</div>
+                    </div>
+                    <div class="p-1 flex-wrap list-group d-flex flex-row justify-content-between border-bottom  align-items-center">
+                        <div class="font-weight-bold">Marital Status</div>
+                        <div class="text-right">Single</div>
+                    </div>
+                    <div class="p-1 border-bottom flex-wrap list-group d-flex flex-row justify-content-between ">
+                        <div class="font-weight-bold">Nationality</div>
+                        <div class="text-right">Nepali</div>
+                    </div>
+                   
+                </div>
+            </div>
+            <!-- Other details -->
+            <div class="w-100 p-4 mt-3 border rounded shadow-sm bg-white">
+                <h6 class="">Other Details</h6>
+                <div class="d-flex small justify-content-between p-1 border-bottom">
+                    <div class="font-weight-bold text-muted">Driver License: </div>
+                    <div>No</div>
+                </div>
+                <!-- language header -->
+                <div class="d-flex small justify-content-between p-1 border-bottom text-muted">
+                    <strong style="font-size: 12px;">Language</strong>
+                    <strong style="font-size: 12px;">Proficiency</strong>
+                </div>
+                <!-- language body -->
+                <div class="d-flex small justify-content-between p-1 text-muted">
+                    <div>Nepali</div>
+                    <div>Expert</div>
+                </div>
+                <div class="d-flex small justify-content-between p-1 text-muted">
+                    <div>English</div>
+                    <div>medium</div>
+                </div>
+                <div class="d-flex small justify-content-between p-1 text-muted">
+                    <div>Hindi</div>
+                    <div>Medium</div>
+                </div>
+            </div>
+            <!--  -->
+            
+          </div>
+          <div class="modal-footer border-top-0">
+            <!-- <button class="btn border">Clear</button> -->
+            <button type="button" class="btn btn-secondary">
+                <span class="d-flex align-items-center"><i class="material-icons mr-2" style="font-size: 1rem;">edit</i><span>Edit</span> </span> 
+              <!-- <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> -->
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!-- Edit About modal -->
+    
+    <div class="modal fade" id="editAboutModal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header border-bottom-0">
+                <h5 class="modal-title align-self-center" id="exampleModalLabel">Edit About</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p class="small w-100 text-center text-muted">Sorry, something went wrong</p>
+                <form action="#">
+                  <div>
+                    <!-- <label for="about-textarea text-muted small">Short description about yourself</label> -->
+                    <!-- <textarea class="form-control text-muted" name="about-textarea" id="about-textarea" rows="3"></textarea> -->
+                    <label for="txtarea" class="small">Short Description about yourself</label>
+                    <textarea
+                      class="form-control"
+                      id="txtarea"
+                      spellcheck="false"
+                      placeholder="Statusku..."
+                      rows="3"
+                      style="font-size: 14px;"
+                    ></textarea>
+                  </div>
+                  <div class="my-2 float-right">
+                    <button class="btn border">Clear</button>
+                    <button type="button" class="btn btn-primary">
+                      Save
+                      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+              
+          </div>
+        </div>
+      </div>
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!-- modal -->
+    <!-- Add experience modal -->
+    <!--  -->
+    <div class="modal fade" id="addExperienceModal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header border-bottom-0">
+                <h5 class="modal-title align-self-center" id="exampleModalLabel">Edit About</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p class="small w-100 text-center text-muted">Sorry, something went wrong</p>
+                <form action="#">
+
+                  <div class="my-1">
+                      <label for="title" class="small text-muted m-0">Title*</label>
+                    <input class="form-control" type="text" placeholder="Ex: Web Front end" id="title">
+                  </div>
+
+                  <div class="my-1">
+                      <label for="employement-type" class="small text-muted m-0">Employement Type</label>
+                   <select class="form-control text-muted" name="" id="employment-type">
+                       <option value="" >Internship</option>
+                       <option value="">Part Time</option>
+                       <option value="">Full Time</option>
+                   </select>
+                </div>
+
+                <div class="my-1">
+                    <label for="company" class="small text-muted m-0">Company*</label>
+                  <input class="form-control" type="text" placeholder="Ex: Web Front end" id="company">
+                </div>
+
+                <div class="my-1">
+                    <label for="location" class="small text-muted m-0">Location*</label>
+                  <input class="form-control" type="text" placeholder="Ex: Dharan,Nepal" id="location">
+                </div>  
+
+                <div class="pl-5 py-2 my-1">
+                    
+                 
+                    <input class="form-check-input mr-5" type="checkbox" id="checkbox">
+                  
+                  <label for="checkbox" class="small text-muted m-0">I am currently working in this role</label>
+                </div>
+
+                <div class="row my-1">
+                    <div class="col-5">
+                        <label for="employement-type" class="small text-muted m-0">Start year</label>
+                        <select class="form-control text-muted" name="" id="employment-type">
+                            <option value="" selected>year</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-5">
+                        <label for="employement-type" class="small text-muted m-0">End year</label>
+                        <select class="form-control text-muted" name="" id="employment-type">
+                            <option value="" selected>year</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    
+              </div>
+              <div class="my-1">
+                <label class="small text-muted m-0" for="description">Description</label>
+                <textarea class="form-control" name="description" id="description" rows="3"></textarea>
+            </div>
+              
+            <div class="my-1 float-right">
+                <button class="btn border">Clear</button>
+                <button type="submit" class="btn btn-primary">
+                  Save
+                  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                </button>
+              </div>
+
+                </form>
+              </div>
+              
+          </div>
+        </div>
+      </div>
+      <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!-- add educatin modal -->
+    <div class="modal fade" id="addEducationModal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header border-bottom-0 bg-light">
+                <h5 class="modal-title align-self-center" id="exampleModalLabel">Add Academic information</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body bg-light">
+                <p class="small w-100 text-center text-muted m-0">Sorry, something went wrong</p>
+                <form action="#" class=" text-muted">
+                  <div class="my-1">
+                      <label class="small m-0" for="university-name">College or university</label>
+                      <input class="form-control" type="text" placeholder="ex: Tribhuvan University" />
+                    
+                  </div>
+                  <div class="my-1">
+                      <label class="small m-0" for="degree-level">Degree</label>
+                      <input class="form-control" type="text" placeholder="ex: bachelor">
+                  </div>
+                  <div class="my-1">
+                      <label class="small m-0" for="field-of-study">Field Of Study</label>
+                      <input class="form-control" type="text" id="field-of-study" placeholder="ex: engineering">
+                  </div>
+                  <div class="row">
+                      <div class="col-5">
+                        <label for="start-year" class="small m-0">Start Year</label>
+                        <select class="form-control" name="year" id="start-year">
+                            <option value=""></option>
+                        </select>
+                      </div>
+                      <div class="col-2"></div>
+                      <div class="col-5">
+                        <label for="end-year" class="small m-0">End Year</label>
+                        <select class="form-control" name="year" id="end-year">
+                          <option value=""></option>
+                      </select>
+                      </div>
+                  </div>
+                  <div>
+                      <label for="grade" class="m-0 small text-muted">Grade</label>
+                      <input type="text" class="form-control" id="grade">
+                  </div>
+                  <div class="my-1">
+                      <label for="description small text-muted">Description</label>
+                      <textarea name="" id="description" class="form-control" rows="3" placeholder="Description..."></textarea>
+                  </div>
+                  <div class="my-2 float-right">
+                    <button class="btn border">Clear</button>
+                    <button type="submit" class="btn btn-primary">
+                      Save
+                      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+              
+          </div>
+        </div>
+      </div>
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!-- modal -->
+    <!-- main container -->
+    <div class="container-fluid">
+      <!-- row has dash-main-nav and dash-main -->
+      <div class="row">
+        <div class="dash-main-nav p-0">
+          <!-- dash-main-nav has dash-nav-profile && dash-nav-items -->
+          <div class="mainav">
+            <div class="mainav-profile row p-0 justify-content-center align-items-center p-3">
+              <div class="mainav-profile-img col-5"></div>
+              <div class="mainav-profile-text text-center col-7 flex-fill">
+                <small><strong class="text-dark" style="letter-spacing: 0.5px;">David Leinsman</strong></small>
+                <span class="small font-weight-normal text-black-50">Dharan,Sunsari</span>
+              </div>
+              <div class="view-profile col-12 mt-3 text-center">
+                <strong style="font-weight: 500;">
+                  
+                  <!-- <a href="#" class="text-decoration-none text-dark" data-toggle="modal" data-target="#ProfileModal">
+                    View Profile</a
+                  ></strong -->
+                
+              </div>
+            </div>
+            <div class="mainav-links d-flex flex-column">
+              <a href="#" class="text-decoration-none text-center px-4 py-2 mt-3">
+                Job Vacancy <i class="material-icons">work</i>
+              </a>
+              <a href="#" class="text-decoration-none text-center px-4 py-2">
+                Interview <i class="material-icons">mode_comment</i>
+              </a>
+              <a href="#" class="text-decoration-none text-center px-4 py-2">
+                Certification <i class="material-icons">card_membership</i>
+              </a>
+              <a href="#" class="text-decoration-none text-center px-4 py-2">
+                Announcement <i class="material-icons">announcement</i>
+              </a>
+              <a href="#" class="text-decoration-none text-center px-4 py-2">
+                Log out <i class="material-icons">exit_to_app</i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- dash-main-nav ended-->
+        <!--  -->
+        <!-- dash-main of main container starts -->
+        <div class="dash-main bg-light p-3">
+          <!-- top nav bar of dash main -->
+          <div class="dash-topbar row shadow-sm pb-3">
+            <!-- menu button -->
+            <div class="col-1 align-self-center text-muted invisible">
+              <i class="material-icons dash-menu-btn" onclick="toggleSidenav()">menu</i>
+            </div>
+            <!--  -->
+            <div class="col-sm-8">
+              <form action="#">
+                <div class="row">
+                  <div class="col-4 align-self-center px-0">
+                    <input type="text" placeholder="job title" class="border p-1 rounded w-100" />
+                  </div>
+                  <div class="col-4 align-self-center pl-1">
+                    <input type="text" placeholder="location" class="border p-1 rounded w-100" />
+                  </div>
+                  <div class="col-4 pl-0">
+                    <button type="button" class="btn px-2 pb-0">
+                      <i class="material-icons text-black-50">gps_fixed</i>
+                    </button>
+                    <button type="submit" class="btn bg-white shadow-sm px-2 pb-0 ml-1">
+                      <i class="material-icons text-black-50">search</i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- search bar for responsive -->
+            <!-- <div class="col-8 align-self-center">
+              <form action="#">
+                <div>
+                  <input type="text" placeholder="search" class="bg-white border rounded p-2" />
+                </div>
+              </form>
+            </div> -->
+            <!--  -->
+            <div class="col-3 d-flex justify-content-center bg-transparent">
+              <!-- invisible search button -->
+              <button
+                class="res-search bg-white border-0 shadow-sm d-flex align-items-center mr-2 px-2 rounded invisible"
+                data-toggle="modal"
+                data-target="#exampleModal"
+              >
+                <i class="material-icons text-muted font-weight-bold"> search</i>
+              </button>
+              <!--  -->
+              <button class="res-search bg-white border-0 shadow-sm d-flex align-items-center mr-2 px-2 rounded">
+                <i class="material-icons text-muted font-weight-bold"> settings</i>
+              </button>
+              <button class="dash-notifications bg-transparent border-0">
+                <i class="material-icons text-muted bg-white p-2 rounded shadow-sm">notifications</i>
+                <span
+                  class=""
+                  style="
+                    height: 6px;
+                    width: 6px;
+                    background-color: crimson;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 34%;
+                    top: 12%;
+                    visibility: hidden;
+                  "
+                ></span>
+              </button>
+            </div>
+          </div>
+          <!--lookup top nav bar ended  -->
+          <!--  -->
+          <!--  -->
+          <!--  -->
+          <!-- start here ffor profile -->
+
+          <div class="row p-3">
+            <!-- first container -->
+            <div class="first-container col-12 bg-white border rounded shadow-sm">
+              <div class="row p-2">
+                <!-- image and details -->
+                <div class="col-12 col-sm-4 d-flex flex-column align-items-center justify-content-center bg-white">
+                  <img
+                    class="rounded-circle"
+                    height="120"
+                    width="120"
+                    src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
+                  />
+                  <div>
+                    <h6 class="text-dark">David Leinsman</h6>
+                    <p class="small text-muted">Front End developer</p>
+                    <p class="small text-black-50 d-flex align-items-center" style="font-size: 12px;">
+                      <i class="material-icons" style="font-size: 1rem;">place</i>
+                      Dharan,Nepal
+                    </p>
+                  </div>
+                </div>
+                <!-- contact information -->
+                <div class="bg-white col-12 col-sm-4 d-flex flex-column justify-content-center">
+                  <div class="align-self-center">
+                    <h6 class="text-dark">Contact information</h6>
+                    <div class="">
+                      <small class="text-muted">EMAIL</small>
+                      <p class="d-flex align-items-center text-black-50">
+                        <small class="">random@email.com</small>
+                        <i class="material-icons ml-1" style="font-size: 1rem;">email</i>
+                      </p>
+                    </div>
+                    <div class="">
+                      <small class="text-muted">PHONE NO</small>
+                      <p class="d-flex align-items-center text-black-50">
+                        <small>+977 9843423543</small>
+                        <i class="material-icons ml-1" style="font-size: 1rem;">call</i>
+                      </p>
+                    </div>
+                    <div>
+                        <!-- mdal trigger -->
+                      <a href="#" class="small text-decoration-none text-muted"  data-toggle="modal" data-target="#ViewDetailsModal" onclick="viewDetails()"><strong>View more details</strong></a>
+                    </div>
+                  </div>
+                </div>
+                <!-- training certificates -->
+                <div class="training-certificate col-12 col-sm-4 bg-white d-flex flex-column py-4">
+                  <div class="align-self-center">
+                    <h6>Training Certificates</h6>
+                    <div></div>
+                    <div class="text-muted d-flex align-items-center">
+                      <a href="#" class="small mr-2 text-decoration-none"
+                        ><strong class="text-muted">View CV</strong></a
+                      >
+                      <i class="material-icons mr-2" style="font-size: 1rem;">save_alt</i>
+                      <i class="material-icons" style="font-size: 1rem;">create</i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- row inside first containe closed -->
+            </div>
+            <!-- first container closed -->
+            <!--  -->
+            <!--  -->
+            <!-- second container -->
+            <div class="col-12 my-3 bg-white border rounded shadow-sm">
+              <div class="row p-1">
+                <div
+                  class="col-6 col-sm-3 col-md-6 col-lg-3 bg-white border-right d-flex flex-column align-items-center"
+                >
+                  <p class="display-3">0</p>
+                  <h6 class="w-100 text-center">Short Listed</h6>
+                </div>
+                <div
+                  class="col-6 col-sm-3 col-md-6 col-lg-3 bg-white border-right d-flex flex-column align-items-center"
+                >
+                  <p class="display-3">0</p>
+                  <h6 class="w-100 text-center">Jobs Applied</h6>
+                </div>
+                <div
+                  class="col-6 col-sm-3 col-md-6 col-lg-3 bg-white border-right d-flex flex-column align-items-center"
+                >
+                  <p class="display-3">0</p>
+                  <h6 class="w-100 text-center">Profile Visits</h6>
+                </div>
+                <div class="col-6 col-sm-3 col-md-6 col-lg-3 bg-white d-flex flex-column align-items-center">
+                  <p class="display-3">0</p>
+                  <h6 class="w-100 text-center">CV Views</h6>
+                </div>
+              </div>
+            </div>
+            <!-- second container closed -->
+            <!--  -->
+            <!-- about container -->
+            <div class="col-12 my-3 border rounded shadow-sm py-2 pb-4 bg-white">
+              <div class="row">
+                <!-- header -->
+                <div class="col-12 d-flex justify-content-between">
+                  <h6 class="text-dark">About</h6>
+                  <span
+                    ><i
+                      onclick="editAbout()"
+                      class="material-icons text-muted about-container-edit"
+                      data-toggle="modal"
+                      data-target="#editAboutModal"
+                      style="font-size: 1.1rem;"
+                      >edit</i
+                    ></span
+                  >
+                </div>
+                <!--  -->
+                <!-- body -->
+                <div class="col-12 text-muted small">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero tempore iusto ullam! Ut voluptatem
+                  laudantium quas, aspernatur obcaecati molestiae numquam?
+                </div>
+                <!--  -->
+              </div>
+            </div>
+            <!--  -->
+            <!-- third container -->
+            <div class="col-12 my-3 bg-white border rounded shadow-sm">
+              <div class="row pt-2">
+                <!-- experience header -->
+                <div class="col-12 d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center">
+                    <small>
+                      <i class="material-icons text-black-50 mr-2">work</i>
+                    </small>
+                    <h6 class="text-dark">Experience</h6>
+                  </div>
+
+                  <div class="">
+                    <i   data-toggle="modal" data-target="#addExperienceModal"  class="material-icons text-muted font-weight-bold" style="font-size: 1.2rem;" onclick="addExperience()">
+                      add
+                    </i>
+                    <i class="material-icons text-muted" style="font-size: 1.1rem;">
+                      create
+                    </i>
+                  </div>
+                </div>
+                <!--  -->
+                <!-- experience body -->
+                <div class="bg-white px-4 py-2 pb-0">
+                  <!-- a experience -->
+                  <div class="bg-white">
+                    <h6 class="my-0">UI/UX Designer</h6>
+                    <ul class="mt-1">
+                      <li class="list-group small text-muted">Engineering Garage - Full Time</li>
+                      <li class="list-group small text-muted">Feb 2018-Jan 2019 - Full Time</li>
+                      <li class="list-group small text-muted">Dharan, Koshi Nepal</li>
+                    </ul>
+                  </div>
+                  <!--  -->
+                  <!-- a experience -->
+                  <div class="bg-white">
+                    <h6 class="my-0">UI/UX Designer</h6>
+                    <ul class="mt-1">
+                      <li class="list-group small text-muted">Engineering Garage - Full Time</li>
+                      <li class="list-group small text-muted">Feb 2018-Jan 2019 - Full Time</li>
+                      <li class="list-group small text-muted">Dharan, Koshi Nepal</li>
+                    </ul>
+                  </div>
+                  <!--  -->
+                </div>
+                <!-- experience body closed -->
+              </div>
+            </div>
+            <!-- third container closed -->
+            <!--  -->
+            <!-- Fourth container -->
+            <div class="col-12 my-3 bg-white border rounded shadow-sm">
+              <div class="row pt-2">
+                <!-- Education header -->
+                <div class="col-12 d-flex align-items-center justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <span><i class="material-icons text-muted mr-2">school</i></span>
+                    <h6 class="">Education</h6>
+                  </div>
+                  <div>
+                    <span>
+                      <i class="material-icons font-weight-bold text-muted" style="font-size: 1.2rem;"   data-toggle="modal" data-target="#addEducationModal" onclick="addEducation()" >add</i>
+                    </span>
+                    <span>
+                      <i class="material-icons text-muted" style="font-size: 1.1rem;">create</i>
+                    </span>
+                  </div>
+                </div>
+                <!--  -->
+                <!-- Education body -->
+                <div class="px-4 py-1 bg-white">
+                  <h6>Purwanchal Campus IOE</h6>
+                  <ul class="small text-muted">
+                    <li class="list-group">Bachelor's degree, Computer Engineering</li>
+                    <li class="list-group">2016-2020</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- fourth container closed -->
+            <!--  -->
+            <!-- Fifth container -->
+            <div class="col-12 my-3 bg-white border rounded shadow-sm">
+              <div class="row py-2">
+                <!-- header -->
+                <div class="col-12 d-flex justify-content-between">
+                  <h6>Job Preference</h6>
+                  <span>
+                    <i class="material-icons text-muted" style="font-size: 1.1rem;">create</i>
+                  </span>
+                </div>
+                <!-- body -->
+                <div class="col-12">
+                  <ul class="list-group">
+                    <li class="small text-muted list-group d-flex justify-content-between flex-row p-1 border-bottom">
+                      <strong>Looking for: </strong> <span class="ml-1 text-right">Juniour-level</span>
+                    </li>
+                    <li class="small text-muted list-group d-flex justify-content-between flex-row p-1 border-bottom">
+                      <strong>Job categories: </strong> <span class="ml-1 text-right">Front-end </span>
+                    </li>
+                    <li class="small text-muted list-group d-flex justify-content-between flex-row p-1 border-bottom">
+                      <strong>Available for: </strong> <span class="ml-1 text-right">Full-Time</span>
+                    </li>
+                    <li class="small text-muted list-group d-flex justify-content-between flex-row p-1 border-bottom">
+                      <strong>Job Preference location: </strong>
+                      <span class="ml-1 text-right">Dharan, Koshi, Province-01, Nepal</span>
+                    </li>
+                    <li class="small text-muted list-group d-flex justify-content-between flex-row p-1">
+                      <strong>Expected Salary: </strong> <span class="ml-1 text-right">Nrs.10000 plus</span>
+                    </li>
+                  </ul>
+                </div>
+                <!--  -->
+              </div>
+            </div>
+            <!-- fifth container closes -->
+            <!--  -->
+            <!-- Sixth container -->
+            <div class="col-12 my-3 bg-white border rounded shadow-sm">
+              <div class="row py-2">
+                <!-- header -->
+                <div class="col-12 d-flex justify-content-between">
+                  <h6>Skills</h6>
+                  <div>
+                    <i class="material-icons text-muted font-weight-bold" style="font-size: 1.2rem;">add</i>
+                    <i class="material-icons text-muted" style="font-size: 1.1rem;">edit</i>
+                  </div>
+                </div>
+                <!--  -->
+                <!-- body -->
+                <div class="col-12">
+                  <div class="">
+                    <div class="d-flex flex-column">
+                      <small class="font-weight-normal text-muted">Web Front-End</small>
+                      <small class="font-weight-normal text-muted">Flutter</small>
+                      <small class="font-weight-normal text-muted">Typescript</small>
+                    </div>
+                    <!-- show more button -->
+                    <div class="w-100 bg-success">
+                      <a
+                        class="text-decoration-none small"
+                        data-toggle="collapse"
+                        href="#collapseExample"
+                        role="button"
+                      >
+                        <p
+                          id="skills-show-more"
+                          onclick="showMoreToggle(this)"
+                          class="bg-white d-flex align-items-center justify-content-center p-1"
+                        >
+                          <span id="show-more-text" class="ml-2">Show more</span>
+                          <i id="show-more-icon" class="material-icons mr-2" style="font-size: 1.2rem;">expand_more</i>
+                        </p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="collapse" id="collapseExample">
+                    <div class="d-flex flex-column pb-1">
+                      <small class="font-weight-normal text-muted">Front end development</small>
+                      <small class="font-weight-normal text-muted">Flutter</small>
+                      <small class="font-weight-normal text-muted">Typescript</small>
+                    </div>
+                  </div>
+                  <!-- show more close -->
+                </div>
+                <!--  -->
+              </div>
+            </div>
+          </div>
+          <footer class="bg-light text-dark text-center w-100 mt-4 mb-1">
+            &copy; 2020 e-Recruiter All Rights Reserved
+          </footer>
+        </div>
+        <!--  -->
+
+        <!--  -->
+
+        <!--lookup dash-main ended -->
+      </div>
+
+      <!--lookup row inside container fluid -->
+    </div>
+    <!--lookup container fluid -->
+    <div class="sidenav">
+      <div class="sidenav-cut">
+        <i class="material-icons" onclick="toggleSidenav()">clear</i>
+      </div>
+      <div class="sidenav-profile row p-0 justify-content-center align-items-center">
+        <div class="sidenav-profile-img col-6"></div>
+        <div class="sidenav-profile-text text-center col-6 flex-fill">
+          <small><strong>David Leinsman</strong></small>
+          <small>Dharan,Sunsari</small>
+        </div>
+        <div class="view-profile col-12 mt-3 text-center">
+          <strong style="font-weight: 500;"><a href="#" class="text-decoration-none text-dark">View Profile</a></strong>
+        </div>
+      </div>
+      <div class="sidenav-links">
+        <a href="#" class="text-decoration-none text-center px-4 py-2 mt-3">
+          Job Vacancy <i class="material-icons">work</i>
+        </a>
+        <a href="#" class="text-decoration-none text-center px-4 py-2">
+          Interview <i class="material-icons">mode_comment</i>
+        </a>
+        <a href="#" class="text-decoration-none text-center px-4 py-2">
+          Certification <i class="material-icons">card_membership</i>
+        </a>
+        <a href="#" class="text-decoration-none text-center px-4 py-2">
+          Announcement <i class="material-icons">announcement</i>
+        </a>
+        <a href="#" class="text-decoration-none text-center px-4 py-2">
+          Log out <i class="material-icons">exit_to_app</i>
+        </a>
+      </div>
+    </div>
+
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- popper js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <!-- bootstrap js cdn -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- custom script -->
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+    <script src="./scripts/profile.js"></script>
+  </body>
+</html>
