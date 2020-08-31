@@ -65,48 +65,52 @@
         </div>
 
         <!-- search form -->
-        <form action="#" class="search-form container">
-          <div class="row">
+        <form action="#" class="search-form">
+          <div class="d-flex flex-wrap w-100">
             <!-- row 1 -->
-            <div class="col-12 col-sm-12 col-md-3 my-2">
+            <div class="p-1" style="flex: 3; min-width: 200px;">
               <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon1">
-                    <i class="material-icons">search</i>
-                  </span>
+                <div class="d-flex w-100">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">
+                      <i class="material-icons" style="font-size: 1.2rem;">search</i>
+                    </span>
+                  </div>
+                  <input type="text" class="form-control rounded-0" placeholder="Job title" style="font-size: 14px;" />
                 </div>
-                <input type="text" class="form-control" placeholder="Job title" />
+                <small class="mx-auto small"
+                  ><strong class="small font-weight-bold my-0">Trending Keywords:</strong>
+                  <span class="small">Developer,Engineer,Designer,Accountant</span></small
+                >
               </div>
             </div>
             <!-- row 2 -->
-            <div class="col-12 col-sm-12 col-md-3 my-2">
+            <div class="p-1" style="flex: 3; min-width: 200px;">
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="basic-addon1">
-                    <i class="material-icons">place</i>
+                    <i class="material-icons" style="font-size: 1.2rem;">place</i>
                   </span>
                 </div>
-                <input type="text" class="form-control" placeholder="Location" />
+                <input type="text" class="form-control" placeholder="Location" style="font-size: 14px;" />
               </div>
             </div>
             <!-- row-3 -->
-            <div class="col-12 col-sm-6 col-md-3 my-2">
-              <select class="form-control form-control">
+            <div class="p-1" style="flex: 1; min-width: 130px; font-size: 14px;">
+              <select class="form-control form-control" style="font-size: 14px;">
                 <option>Rookie</option>
                 <option>Experienced</option>
                 <option>Expert</option>
               </select>
             </div>
             <!-- row-4 -->
-            <div class="col-12 col-sm-6 col-md-3 my-2">
-              <button class="btn btn-success">Find Jobs</button>
+            <div class="p-1" style="flex: 1; flex-shrink: 0;">
+              <button class="btn btn-success" style="font-size: 14px;">Find Jobs</button>
             </div>
             <!-- row close -->
           </div>
         </form>
-        <p class="keywords-ref">
-          <small><strong>Trending Keywords:</strong> Developer,Engineer,Designer,Accountant</small>
-        </p>
+        <p class="keywords-ref"></p>
         <!-- div header content close -->
       </div>
     </header>
